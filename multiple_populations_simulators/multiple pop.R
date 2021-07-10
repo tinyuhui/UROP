@@ -65,7 +65,6 @@ sim3.ld = function(populations = 3, generations = 20, p0 = matrix(c(0.25), ncol 
     }
     
     #matrix with entry [k,j] indicating the number of alles of type j at population k
-    pop_after_migration = matrix(nrow = populations, ncol = 4)
     pop_after_migration = colSums(pop_flows, dim = 1)
     
     
