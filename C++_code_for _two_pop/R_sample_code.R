@@ -22,7 +22,8 @@ migration =  matrix(data = c(0.8,0.2, 0.2, 0.8), nrow = 2)
 simulation(p0, q0, N, M, c, migration)
 
 
-#more extreme case with 1 million gametes, takes 10-15 secs on my computerp0 = c(0.5,0.3,0,0.2)
+#more extreme case with 1 million gametes, takes 10-15 secs on my computer
+p0 = c(0.5,0.3,0,0.2)
 q0 = c(0.1,0.3,0,0.6)
 N = rep(500000, 100)
 M = rep(500000, 100)
