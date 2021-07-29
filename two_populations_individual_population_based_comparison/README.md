@@ -16,7 +16,7 @@ The very interesting result was with "two_populations_fixed_matrix_variable_N_po
  
  The plottings for this second algorithm, make a solid argument in favour of this hypotesis. 
  
- If we think about the underlying algorithm for the individual-based simulator
+I also analysed the case, where population 2 is 10 times bigger than population 1. The plots behaved as expected, showing that smaller population sizes have bigger fluctuations in the frequencies around the mean (think SLLN), and that migration partially mitigates this variance.
 
-This difference (or equivalence) in the plottings is very clear if you start with the two populations in equilibrium (p and q equal to c(0.25, 0.25, 0.25, 0.25) ).
-That's simply becuase the range of the y-axis is much narrower if you start with r^2 = 0.
+The difference in the r^2 equilibrium values is very clear if you start with the two populations in equilibrium (p and q equal to c(0.25, 0.25, 0.25, 0.25) ).
+That's simply becuase the range of the y-axis is much narrower if you start with r^2 = 0. Therefore all the plots I made, had populations starting in equilibrium.
