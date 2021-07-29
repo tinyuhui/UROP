@@ -4,7 +4,8 @@ I added "simulation.cpp", "two_populations_fixed_matrix_variable_N_pop_based_RIG
 
 I generally expected population based simulators to have a downward bias compared to the true individual simulator (as it happened with 1-population simulators).
 
-This was the case with "two_populations_fixed_matrix_variable_N_pop_based.R" (reproduction first, migration second), as the algorithm followed the same structure of the 1-pop population based simulator (i.e. (1) non-stochastic recombination  (2) multinomial sampling  (3) calculating r^2 for generation).
+This was the case with "two_populations_fixed_matrix_variable_N_pop_based.R" (reproduction first, migration second), as the algorithm followed the same structure of the 1-pop population based simulator.
+(i.e. (1) non-stochastic recombination  (2) multinomial sampling  (3) calculating r^2 for generation).
 
 The very interesting result was with "two_populations_fixed_matrix_variable_N_pop_based_RIGHT_ORDER.R". Here the algorithm had a slightly more complex structure
 
