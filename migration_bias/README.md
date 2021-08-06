@@ -9,3 +9,5 @@ Plots are given for N = 1000, M = 1000.
 In general Park (2) is not a very good estimator for r^2. 
 When migration = 0, it estimates 2x population sizes for low c (c = 0.01, c = 0.025).
 Yet we can see that as migration grows to say 0.3, for "normal values of c", when tend to overestimate the value of "N" by 30% approximately
+
+The heatmap is tdefinitely easier to read than the 3d plots
