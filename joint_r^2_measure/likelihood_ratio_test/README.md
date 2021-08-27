@@ -16,3 +16,5 @@ High values of my 'r^2' definitiely confirm that there is non-existent/extremely
 Low values of 'r^2' give more uncertain answers: Why? Think about two independent populations started at equilibrium c(0.25,0.25,0.25,0.25). The final frequencies are generally 0.25 +- 0.3
 If p_{00} = 0.28 and q_{00} = 0.23, you are sure that there is no migration.
 However it can be the case that p_{00} = q_{00} = 0.28, even if the two pop are disjoint.
+
+I SUGGEST DOWNLOADING THE COMPARISON PLOTS (those labelled 'c1' or 'c2'), BEACUASE GITHUB DOESN'T DISPLAY THEM VERY CLEARLY
