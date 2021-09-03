@@ -73,8 +73,8 @@ sim2.ld = function(p0 = c(0.25, 0.25, 0.25, 0.25), q0 = c(0.25, 0.25, 0.25, 0.25
     exp_q = q_temp + c(-1, 1, 1, -1)*c*D2_temp
     
     #Allele frequencies after reproduction
-    p[,i+1] = rmultinom(1, size= N[i+1], prob=exp_p) / N[i+1]
-    q[,i+1] = rmultinom(1, size= M[i+1], prob=exp_q) / M[i+1]
+    p[,i+1] = rmultinom(1, size= 2*N[i+1], prob=exp_p) / (2*N[i+1])       
+    q[,i+1] = rmultinom(1, size= 2*M[i+1], prob=exp_q) / (2*M[i+1])
     
   }
   

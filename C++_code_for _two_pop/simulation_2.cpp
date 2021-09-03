@@ -444,3 +444,35 @@ List average_r_sq_individual_based(NumericVector p0, NumericVector q0, IntegerVe
 
     return out;
 }
+
+
+// [[Rcpp::export]]
+double average_r_sq_at_equilibrium(NumericVector p0, NumericVector q0, IntegerVector N, IntegerVector M, double c, NumericMatrix migration, int simulations, int start_gen){
+    
+    /* Given the usual starting parameters plus "start_gen", it computes r^2 for all generations for "simulations" times
+       Then it takes the avearage of values from "start_gen" to the final generation and returns the average over all simulations
+       Essentially, we assume we are already in equilibrium at "start_gen", say 50, so if we simulate 100 generations, and take the average
+       over generations 51,...,100, at each iteration we get 50 data points instead of 1! 
+       The output is a single value, i.e. the equilibrium value of r^2 for the initial parameters
+    */
+    
+    int n = N.length();
+    int m = n-start_gen;
+    
+    IntegerVector v = seq(start_gen - 1, n-1);
+    double r_sq = 0;    
+
+    for (int n = 0; n < simulations; ++n){
+        
+        List l_temp = simulation(p0, q0, N, M, c, migration);
+        NumericVector out1 = l_temp[4];
+           
+        for (int i = 0; i < m; ++i){
+           
+            r_sq += out1[start_gen + i - 1];
+        }            
+    }
+    
+    r_sq = r_sq / (simulations*(n - start_gen));
+    return r_sq;
+}
